@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT_ACEME WEB DESIGN</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body id="body">
+    <!-- header section -->
+    <!-- HEADER SECTION -->
+    <header>
+        <h2><span style="color: brown;">Aceme</span> Web Design</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a id="active" href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </header>
+    <button type="button" id="btn">click me</button>
+    <section style="display: none;" id="aboutsection">
+        <h1> about us</h1>
+        <div class="about">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, et ad! Et provident alias quaerat deleniti quis, optio non quisquam consequatur saepe cumque dolores nisi inventore blanditiis magni possimus voluptatibus autem doloremque dolore, iste minima est omnis illo? Id neque laudantium nulla repellendus libero, corporis, eaque nihil aliquam quod ratione nemo ipsam soluta voluptas error a quas consequatur autem aspernatur unde maxime! Consequatur, quas ullam quidem numquam adipisci consequuntur laborum soluta ad quis nobis? Incidunt optio obcaecati quisquam expedita, facere vel dolorem quasi quae id nihil rerum hic aspernatur? Corrupti molestiae earum, consequatur esse tenetur obcaecati aspernatur. Quisquam omnis quas, inventore tempora minus iusto illum ut sed! Deleniti omnis similique tempore minima atque ex quis distinctio obcaecati sequi in impedit vero, ipsum corrupti optio maiores itaque explicabo ratione? Quo quam, labore harum porro totam tempora fugit perspiciatis incidunt eum modi autem libero qui ullam nobis aperiam enim quae illo aliquid. Corrupti sed perferendis illo asperiores, omnis iure dolor modi provident doloribus itaque excepturi dolorem. Necessitatibus veritatis excepturi, ipsa nam maiores corporis nisi dolore reprehenderit cumque. Sed in quia quibusdam accusamus aut corrupti sequi non totam odio, veniam nisi dolor quas debitis. Inventore quos quaerat maiores. Vitae delectus laborum est rerum. Asperiores, alias recusandae amet similique quis, cupiditate cumque earum saepe perferendis quibusdam rerum necessitatibus nesciunt sint! Odio molestias sed tempore commodi expedita, nulla mollitia ex. Voluptates ad perferendis voluptatem magni, atque, nemo reiciendis nulla repellendus eaque fugiat expedita quia deleniti natus suscipit consectetur accusamus. Quaerat voluptatem possimus ut perspiciatis laudantium odit, voluptatum quod ipsum? Impedit nostrum ex ad molestiae modi similique consequuntur recusandae nemo quo earum officia, quibusdam eaque a possimus deserunt illum vel? Facilis eveniet repellat, voluptates, iusto totam qua.</p>
+            <div class="subscription">
+                <p>Subscribe To Our Newsletter</p>
+                <form>
+                    <label  id="message"></label>
+                    <img id="good" src="success.png" alt="good-mark">
+                    <label id="loading">loading...</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
+                    <button type="button" id="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>Acme Web Design &copy;2023</p>
+        </footer>
+    </section>
+    <script>
+        let body = document.getElementById("body");
+        let aboutBtn = document.getElementById("btn");
+        let aboutSection = document.getElementById("aboutsection");
+        aboutBtn.addEventListener("click",(e)=>{
+            e.preventDefault();
+            setTimeout(() => {
+            {(aboutSection.style.display === "none")? 
+            aboutSection.style.display = "block": 
+            aboutSection.style.display = "none"};    
+        }, 1000);
+            
+        });
+        
+        let message = document.getElementById("message");
+            let loading = document.getElementById("loading");
+            let goodMark = document.getElementById("good");
+            let email = document.querySelector("#email");
+            let sendbtn = document.getElementById("submit");
+            
+            sendbtn.addEventListener("click", (e)=>{
+                e.preventDefault();
+               if(email.value.includes("@") && email.value.includes(".com") && email.value !== "" && isNaN(email.value)){
+                email.style.border = "2px solid green";
+                setTimeout(() => {
+                    email.style.display = "none"; 
+                }, 500);
+                setTimeout(() => {
+                    loading.style.display = "flex";
+    
+                }, 1000);
+                setTimeout(() => { 
+                    goodMark.style.display = "flex";
+                    loading.style.display = "none";
+                }, 4000);
+                setTimeout(() => { 
+                    message.innerText = `A link to verify your email has been sent to ${email.value}. Thank you!`;
+                    message.style.color = "green";
+                    goodMark.style.display = "none";
+                }, 7500);
+                setTimeout(() => { 
+                    email.style.display = "flex";
+                    email.style.border = "none";
+                    email.value = "";
+                    message.style.display = "none";
+                }, 15000);
+                
+               }
+               else{ 
+                return email.style.border = "1px solid red";
+               } 
+                
+            })
+    </script>
+</body>
+</html>

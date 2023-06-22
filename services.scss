@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:url(image\ agr.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (max-width:600px) {
+        margin: auto;
+        width: auto;
+        height: auto;
+    }
+
+header{
+    background-color: rgb(47, 69, 79);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    margin: auto;
+    border-bottom: 2px solid brown;
+    h2{
+        color: white;
+        font-size: 15px;
+        margin: auto 40px;
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 40px;
+        li{
+            list-style-type: none;
+            #active{
+                color: brown;
+            }
+            a{
+                color: white;
+                padding: 10px;
+                font-size: 15px;
+                text-transform: uppercase;
+                text-decoration: none;
+                cursor: pointer;
+                &:hover{
+                    color: gold;
+                    transition: all 0.5s;
+                }
+    
+            }
+        }        
+    }
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin: 20px auto;
+    color: white;
+    &:hover{
+        color: gold;
+        transition: all 0.5s;
+        cursor: pointer;
+        animation: about 8s linear forwards;
+        @keyframes about {
+            0%{
+                border: 0;
+                background-color: black;
+                color: black;
+                width: 210px;
+                border-style: ridge;
+            }
+            50%{
+                border: 0;
+                background-color: initial;
+                color: black;
+                width: 100%;
+        
+            }
+            100%{
+                border: 0;
+                background-color: black;
+                color: white;
+                width: 210px;
+                border-style: ridge;
+        
+            }
+        }
+    }
+   
+}
+
+#btn{
+    padding: 10px;
+    background-color: black;
+    color: aqua;
+    border: 0;
+    outline: 0;
+    margin: 10px auto;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.services{
+    margin: auto;
+    width: 100%;
+    p{
+        color: white;
+        font-size: 20px;
+        margin: auto 20px;
+        text-align: justify;
+    }
+    .subscription{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px auto;
+        @media screen and (max-width:600px){
+            flex-direction: column;
+        }
+        p{
+            text-align: justify;
+            font-size: 25px;
+            color: blue;
+            margin: auto 20px;
+            @media screen and (max-width:600px) {
+                margin-top: -20px;
+                width: auto;
+                height: auto;
+            }
+        }
+        form{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            #message{
+                right: 140px;
+                position: absolute;
+                font-size: 24px;
+                text-align: center;
+                top: 68%;
+                @media screen and (max-width:600px) {
+                    margin-top: 20px;
+                    width: auto;
+                    height: auto;
+                    top: 150%;
+                    right: 100px;
+                    font-size: 15px;
+            }
+            }
+
+        #good{
+            position: absolute;
+            right: 150px;
+            top: 68%;
+            height: 29px;
+            width: 30px;
+            display: none;
+            @media screen and (max-width:600px) {
+                margin: 20px auto;
+                width: auto;
+                height: auto;
+                top: 150%;
+                height: 29px;
+                width: 30px;
+        }
+    }
+        #loading{
+            right: 180px;
+            position: absolute;
+            font-size: 24px;
+            top: 68%;
+            display: none;
+            @media screen and (max-width:600px) {
+                margin: 20px auto;
+                width: auto;
+                height: auto;
+                top: 150%;
+                height: 29px;
+                width: 30px;
+        }
+        }
+            input{
+                position: absolute;
+                padding: 5px;
+                width: 150px;
+                border: 0;
+                right: 78px;
+                top: 68%;
+                outline: 0;
+                @media screen and (max-width:600px) {
+                    margin: 20px auto;
+                    width: auto;
+                    height: auto;
+                    top: 150%;
+                }
+            }
+            button{
+                position: absolute;
+                right: 10px;
+                top: 68%;
+                padding: 5px;
+                background-color: brown;
+                border: 0;
+                outline: 0;
+                cursor: pointer;
+                color: white;
+                @media screen and (max-width:600px) {
+                    margin: 20px auto;
+                    width: auto;
+                    height: auto;
+                    top: 150%;
+                }
+            }
+        }
+    }
+    }
+    footer{
+        background-color: rgb(165, 65, 42);
+        width: 100%;
+        height: 10vh;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            text-align: center;
+            color: white;
+        }
+        @media screen and (max-width:600px) {
+            margin: auto;
+            width: auto;
+            height: 10vh;
+        }
+    }
+}

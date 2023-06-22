@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceme Web Design 2023</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <h2><span style="color: brown;">Aceme</span> Web Design</h2>
+        <ul>
+            <li><a id="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </header>
+    <!-- HEADING SECTION -->
+        <div class="heading">
+            <h1>Affordable Professional Websites</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, nesciunt.</p>
+        
+        </div>
+        <!-- SUBSCRIPTION SECTION -->
+        <div class="subscription">
+            <p>Subscribe To Our Newsletter</p>
+            <form>
+                <label  id="message"></label>
+                <img id="good" src="success.png" alt="good-mark">
+                <label id="loading">loading...</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
+                <button type="submit" id="submit">Subscribe</button>
+            </form>
+        </div>
+        <!-- images and their contents -->
+        <div class="images">
+            <div class="image_1">
+                <img src="html.jpg" alt="HTML_logo">
+                <h3>HTML MarkUp</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image_2">
+                <img src="css.png" alt=" CSS_logo">
+                <h3>CSS Styling</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image_3">
+                <img src="Desktop.jpg" alt="Desktop_image" width="120" height="120">
+                <h3>Graphic Design</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <footer>
+            <p>Acme Web Design &copy;2023</p>
+        </footer>
+        <script>
+
+            let message = document.getElementById("message");
+            let loading = document.getElementById("loading");
+            let goodMark = document.getElementById("good");
+            let email = document.getElementById("email");
+            let sendbtn = document.getElementById("submit");
+            
+            sendbtn.addEventListener("click", (e)=>{
+                e.preventDefault();
+               if(email.value != "" && email.value.includes(".com") && isNaN(email.value) &&
+                email.value.includes("@")){
+                email.style.border = "2px solid green";
+                setTimeout(() => {
+                    email.style.display = "none"; 
+                }, 500);
+                setTimeout(() => {
+                    loading.style.display = "flex";
+                }, 1000);
+                setTimeout(() => { 
+                    goodMark.style.display = "flex";
+                    loading.style.display = "none";
+                }, 5000);
+                setTimeout(() => { 
+                    goodMark.style.display = "none";
+                    message.innerText = `A link to verify your email has been sent to ${email.value}. Thank you!`;
+                    message.style.color = "green";
+                }, 7500);
+                setTimeout(() => { 
+                    email.style.display = "flex";
+                    email.style.border = "none";
+                    email.value = "";
+                    message.style.display = "none";
+                }, 15000);
+                
+               }
+               else{ 
+                return email.style.border = "1px solid red";
+               } 
+            })  
+    
+        </script>
+</body>
+</html>

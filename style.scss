@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(47, 69, 79);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    margin: auto;
+    border-bottom: 2px solid brown;
+    h2{
+        color: white;
+        font-size: 15px;
+        margin: auto 40px;
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 40px;
+        li{
+            list-style-type: none;
+            #active{
+                color: brown;
+            }
+            a{
+                color: white;
+                padding: 10px;
+                font-size: 15px;
+                text-transform: uppercase;
+                text-decoration: none;
+                cursor: pointer;
+                &:hover{
+                    color: gold;
+                    transition: all 0.5s;
+                }
+    
+            }
+        }        
+    }
+}
+
+.heading{
+    background-image: url(service.jpg.webp);
+    width: 100vw;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    margin: auto;
+    h1{
+        margin-top: -40px;
+        color: brown;
+        font-size: 30px;
+    }
+    p{
+        color: coral;
+        font-weight: bolder;
+        margin-top: 20px;
+    }
+}
+.subscription{
+    background-color: rgb(47, 69, 79);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    p{
+        color: white;
+        margin: auto;
+        text-align: center;
+        font-size: 20px;
+        width: auto;
+    }
+    form{
+        width: 100vw;
+        margin: auto 40px;
+        @media screen and (max-width:600px) {
+            margin: auto;
+            width: auto;
+            height: auto;
+        }
+        #message{
+                right: 140px;
+                position: absolute;
+                font-size: 20px;
+                top: 63%;
+                text-align: center;
+                @media screen and (max-width:600px) {
+                    margin: auto;
+                    width: auto;
+                    height: auto;
+                    top: 63%;
+                    right: 100px;
+                    font-size: 15px;
+            }
+            }
+
+        #good{
+            position: absolute;
+            right: 150px;
+            top: 61%;
+            height: 29px;
+            width: 30px;
+            display: none;
+            @media screen and (max-width:600px) {
+                margin: auto;
+                width: auto;
+                height: auto;
+                top: 63.5%;
+                height: 29px;
+                width: 30px;
+        }
+    }
+        #loading{
+            right: 180px;
+            position: absolute;
+            font-size: 24px;
+            top: 61%;
+            display: none;
+            @media screen and (max-width:600px) {
+                margin: auto;
+                width: auto;
+                height: auto;
+                top: 64%;
+                height: 29px;
+                width: 30px;
+        }
+        }
+        input{
+            width: auto;
+            position: absolute;
+            padding: 7px;
+            border: 0;
+            outline: 0;
+            right:78px;
+            top: 61%;
+            @media screen and (max-width:600px) {
+                margin: auto;
+                width: auto;
+                height: auto;
+                top: 63.5%;
+            }
+        }
+        button{
+            padding: 10px 10px 8px 10px;
+            font-size: 10px;
+            width: auto;
+            right: 10px;
+            top: 61%;
+            color: white;
+            position: absolute;
+            cursor: pointer;
+            background-color: brown;
+            border: 0;
+            outline: 0;
+            &:hover{
+                background-color: white;
+                color: red;
+                transition: all 1.5s;
+            }
+            @media screen and (max-width:600px) {
+                margin: auto;
+                width: auto;
+                height: auto;
+                top: 63.5%;
+            }
+        }
+    }
+}
+.images{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background-color: lightgray;
+    flex: 1;
+    width: 100vw;
+    gap: 10px;
+    .image_1{
+        width: 100px;
+        height: 100px;
+        margin: 80px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        P{
+            text-align: center;
+            font-size: 20px;
+        }
+        h3{
+            text-align: center;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+    }
+    .image_2{
+        width: 100px;
+        height: 100px;
+        margin: 70px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h3{
+            text-align: center;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+    .image_3{
+        width: 50px;
+        height: 50px;
+        margin: 120px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h3{
+            text-align: center;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+}
+footer{
+    background-color: rgb(165, 65, 42);
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        text-align: center;
+        color: white;
+    }
+}

@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(image\ agr.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 600px) {
+  body {
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+}
+
+header {
+  background-color: rgb(47, 69, 79);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  margin: auto;
+  border-bottom: 2px solid brown;
+}
+header h2 {
+  color: white;
+  font-size: 15px;
+  margin: auto 40px;
+  text-align: center;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 40px;
+}
+header ul li {
+  list-style-type: none;
+}
+header ul li #active {
+  color: brown;
+}
+header ul li a {
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+header ul li a:hover {
+  color: gold;
+  transition: all 0.5s;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin: 20px auto;
+  color: white;
+}
+h1:hover {
+  color: gold;
+  transition: all 0.5s;
+  cursor: pointer;
+  animation: about 8s linear forwards;
+}
+@keyframes about {
+  0% {
+    border: 0;
+    background-color: black;
+    color: black;
+    width: 150px;
+    border-style: ridge;
+  }
+  50% {
+    border: 0;
+    background-color: initial;
+    color: black;
+    width: 100%;
+  }
+  100% {
+    border: 0;
+    background-color: black;
+    color: white;
+    width: 150px;
+    border-style: ridge;
+  }
+}
+
+#btn {
+  padding: 10px;
+  background-color: black;
+  color: aqua;
+  border: 0;
+  outline: 0;
+  margin: 10px auto;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+#btn:hover {
+  transition: all 1.5s;
+  background-color: aqua;
+  color: black;
+}
+
+.about {
+  margin: auto;
+  width: 100%;
+}
+.about p {
+  color: white;
+  font-size: 20px;
+  margin: auto 20px;
+  text-align: justify;
+}
+.about .subscription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+}
+@media screen and (max-width: 600px) {
+  .about .subscription {
+    margin: auto;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+  }
+}
+.about .subscription p {
+  text-align: justify;
+  font-size: 25px;
+  color: blue;
+  padding: 10px;
+  margin: 0;
+}
+@media screen and (max-width: 600px) {
+  .about .subscription p {
+    margin: auto;
+    width: auto;
+    text-align: center;
+    font-size: 19px;
+    height: auto;
+  }
+}
+.about .subscription form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .about .subscription form {
+    margin: auto;
+    width: auto;
+  }
+}
+.about .subscription form #message {
+  right: 140px;
+  text-align: center;
+  position: absolute;
+  font-size: 20px;
+  top: 85%;
+  z-index: 1;
+}
+@media screen and (max-width: 600px) {
+  .about .subscription form #message {
+    margin: auto;
+    width: auto;
+    height: auto;
+    top: 198%;
+    right: 100px;
+    font-size: 15px;
+  }
+}
+.about .subscription form #good {
+  position: absolute;
+  right: 150px;
+  top: 85%;
+  height: 29px;
+  width: 30px;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .about .subscription form #good {
+    margin: auto;
+    width: auto;
+    height: auto;
+    top: 198%;
+    height: 29px;
+    width: 30px;
+  }
+}
+.about .subscription form #loading {
+  right: 180px;
+  position: absolute;
+  font-size: 24px;
+  top: 85%;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .about .subscription form #loading {
+    margin: auto;
+    width: auto;
+    height: auto;
+    top: 198%;
+    height: 29px;
+    width: 30px;
+  }
+}
+.about .subscription form input {
+  position: absolute;
+  right: 78px;
+  top: 85%;
+  padding: 5px;
+  width: 150px;
+  border: 0;
+  outline: 0;
+}
+@media screen and (max-width: 600px) {
+  .about .subscription form input {
+    margin: auto;
+    width: auto;
+    position: absolute;
+    height: auto;
+    top: 198%;
+  }
+}
+.about .subscription form button {
+  position: absolute;
+  right: 10px;
+  top: 85%;
+  padding: 5px;
+  background-color: brown;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  .about .subscription form button {
+    margin: auto;
+    width: auto;
+    height: auto;
+    top: 198%;
+  }
+}
+
+footer {
+  background-color: rgb(165, 65, 42);
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  text-align: center;
+  color: white;
+}/*# sourceMappingURL=about.css.map */

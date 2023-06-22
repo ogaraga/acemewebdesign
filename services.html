@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICES_ACME WEB DESIGN</title>
+    <link rel="stylesheet" href="services.css">
+</head>
+<body id="body">
+     <!-- HEADER SECTION -->
+    <header>
+        <h2><span style="color: brown;">Aceme</span> Web Design</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a  id="active"  href="services.html" >Services</a></li>
+        </ul>
+    </header>
+    <button type="button" id="btn">CLICK ME</button>
+    <section style="display: none;" id="services_section">
+            <h1>Our services</h1>
+            <div class="services">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ullam. Ea earum praesentium minus fuga possimus. Ipsa dolorum quidem doloribus sapiente quibusdam distinctio autem, eos tempora nihil magnam? Expedita, corporis nisi fugiat quae eveniet commodi praesentium molestias explicabo eum voluptatibus fugit molestiae maiores suscipit ab voluptate, blanditiis doloribus. Sit obcaecati ex corrupti consequuntur est laboriosam commodi eaque hic, tempora facere amet laudantium culpa error maiores non aliquid cupiditate, illum vero quae eligendi! Iure officia soluta pariatur illum quam, fugit alias aperiam sed et nobis facilis culpa beatae error animi veritatis dolor voluptas praesentium id optio. Quas, adipisci non ullam inventore beatae facilis expedita voluptate laboriosam commodi corporis optio voluptas minus ad nulla id culpa, dolore autem? Assumenda similique suscipit, placeat asperiores ea aperiam rerum quisquam cum, obcaecati illum id a accusantium odit cumque, dolor aliquid odio eaque eum. Modi neque consectetur ex maxime, magnam sapiente officia nihil pariatur impedit id, totam vitae, quasi doloribus corporis quas itaque minus? Perferendis, accusantium officiis! Blanditiis ullam repudiandae nemo repellendus illo assumenda, quia cum provident illum doloremque autem voluptatum maxime facere cumque dolores amet ex dolore eius, consequatur fuga? Similique voluptas saepe a ea at. Inventore praesentium totam reiciendis tempore officia suscipit incidunt. Adipisci.</p>
+                <div class="subscription">
+                    <p>Subscribe To Our Newsletter</p>
+                    <form>
+                        <label  id="message"></label>
+                        <img id="good" src="success.png" alt="good-mark">
+                        <label id="loading">loading...</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
+                        <button type="button" id="submit">Subscribe</button>                    </form>
+                </div>
+
+            </div>
+            <footer>
+                <p>Acme Web Design &copy;2023</p>
+            </footer>
+    </section>
+    <script>
+        let body = document.getElementById("body");
+        let servBtn = document.getElementById("btn");
+        let servSection = document.getElementById("services_section");
+        servBtn.addEventListener("click",(e)=>{
+            e.preventDefault();
+            setTimeout(() => {
+            {(servSection.style.display === "none")? 
+            servSection.style.display = "block": 
+            servSection.style.display = "none"};
+           }, 500);
+            
+        });
+        
+        let message = document.getElementById("message");
+            let loading = document.getElementById("loading");
+            let goodMark = document.getElementById("good");
+            let email = document.querySelector("#email");
+            let sendbtn = document.getElementById("submit");
+            
+            sendbtn.addEventListener("click", (e)=>{
+                e.preventDefault();
+               if(email.value !== "" && email.value.includes(".com") && email.value.includes("@") && isNaN(email.value)){
+                email.style.border = "2px solid green";
+                setTimeout(() => {
+                    email.style.display = "none"; 
+                }, 500);
+                setTimeout(() => {
+                    loading.style.display = "flex";
+                }, 1000);
+                setTimeout(() => { 
+                    goodMark.style.display = "flex";
+                    loading.style.display = "none";
+                }, 5000);
+                setTimeout(() => { 
+                    goodMark.style.display = "none";
+                    message.innerText = `A link to verify your email has been sent to ${email.value}. Thank you!`;
+                    message.style.color = "green";
+                }, 7500);
+                setTimeout(() => { 
+                    email.style.display = "flex";
+                    email.style.border = "none";
+                    email.value = "";
+                    message.style.display = "none";
+                }, 15000);
+                
+               }
+               else{ 
+                return email.style.border = "1px solid red";
+               } 
+                
+            })
+    </script>
+</body>
+</html>
