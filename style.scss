@@ -75,6 +75,10 @@ header{
     align-items: center;
     width: 100vw;
     height: 10vh;
+    @media screen and (max-width:600px) {
+        display: grid;
+        margin: auto;
+    }
     p{
         color: white;
         margin: auto;
@@ -86,7 +90,7 @@ header{
         width: 100vw;
         margin: auto 40px;
         @media screen and (max-width:600px) {
-            margin: auto;
+            margin:  30px auto;
             width: auto;
             height: auto;
         }
@@ -100,7 +104,7 @@ header{
                     margin: auto;
                     width: auto;
                     height: auto;
-                    top: 63%;
+                    top: 62%;
                     right: 100px;
                     font-size: 15px;
             }
@@ -117,7 +121,7 @@ header{
                 margin: auto;
                 width: auto;
                 height: auto;
-                top: 63.5%;
+                top: 62%;
                 height: 29px;
                 width: 30px;
         }
@@ -132,7 +136,7 @@ header{
                 margin: auto;
                 width: auto;
                 height: auto;
-                top: 64%;
+                top: 62%;
                 height: 29px;
                 width: 30px;
         }
@@ -149,7 +153,7 @@ header{
                 margin: auto;
                 width: auto;
                 height: auto;
-                top: 63.5%;
+                top: 62%;
             }
         }
         button{
@@ -173,7 +177,7 @@ header{
                 margin: auto;
                 width: auto;
                 height: auto;
-                top: 63.5%;
+                top: 62%;
             }
         }
     }
