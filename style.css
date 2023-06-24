@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 600px) {
+  body {
+    margin: auto;
+    width: auto;
+    height: auto;
+  }
+}
+
 header {
   background-color: rgb(47, 69, 79);
   display: flex;
@@ -14,25 +30,51 @@ header {
   margin: auto;
   border-bottom: 2px solid brown;
 }
+header #spandiv {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 20%;
+  cursor: pointer;
+}
+header #spandiv #spen {
+  display: none;
+  width: 23px;
+  height: 3px;
+  background-color: white;
+  margin-top: 2px;
+}
+@media screen and (max-width: 600px) {
+  header #spandiv #spen {
+    display: block;
+  }
+}
 header h2 {
   color: white;
   font-size: 15px;
   margin: auto 40px;
   text-align: center;
 }
-header ul {
+header .navitems {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: auto 40px;
 }
-header ul li {
+@media screen and (max-width: 600px) {
+  header .navitems {
+    display: none;
+    background-color: grey;
+  }
+}
+header .navitems li {
   list-style-type: none;
 }
-header ul li #active {
+header .navitems li #isactive {
   color: brown;
 }
-header ul li a {
+header .navitems li a {
   color: white;
   padding: 10px;
   font-size: 15px;
@@ -40,7 +82,7 @@ header ul li a {
   text-decoration: none;
   cursor: pointer;
 }
-header ul li a:hover {
+header .navitems li a:hover {
   color: gold;
   transition: all 0.5s;
 }
@@ -199,21 +241,37 @@ header ul li a:hover {
 
 .images {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   background-color: lightgray;
   flex: 1;
   width: 100vw;
   gap: 10px;
 }
+@media screen and (max-width: 600px) {
+  .images {
+    width: 100vw;
+    margin: auto;
+    height: auto;
+    display: grid;
+    place-content: center;
+  }
+}
 .images .image_1 {
   width: 100px;
   height: 100px;
-  margin: 80px 40px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (max-width: 600px) {
+  .images .image_1 {
+    margin-top: 90px;
+  }
 }
 .images .image_1 P {
   text-align: center;
@@ -227,11 +285,16 @@ header ul li a:hover {
 .images .image_2 {
   width: 100px;
   height: 100px;
-  margin: 70px 40px;
+  margin: 70px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (max-width: 600px) {
+  .images .image_2 {
+    margin-top: 110px;
+  }
 }
 .images .image_2 h3 {
   text-align: center;
@@ -245,11 +308,16 @@ header ul li a:hover {
 .images .image_3 {
   width: 50px;
   height: 50px;
-  margin: 120px 40px;
+  margin: 120px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (max-width: 600px) {
+  .images .image_3 {
+    margin-top: 90px;
+  }
 }
 .images .image_3 h3 {
   text-align: center;
@@ -274,6 +342,11 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    width: 100vw;
+  }
 }
 footer p {
   text-align: center;

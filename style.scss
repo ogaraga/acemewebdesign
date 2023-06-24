@@ -3,6 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (max-width:600px) {
+        margin: auto;
+        width: auto;
+        height: auto;
+    }
+
+}
 header{
     background-color: rgb(47, 69, 79);
     display: flex;
@@ -12,20 +26,45 @@ header{
     height: 10vh;
     margin: auto;
     border-bottom: 2px solid brown;
+    #spandiv{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        right: 20%;
+        cursor: pointer;
+        
+    #spen{
+        display: none;
+        width: 23px;
+        height: 3px;
+        background-color: white;
+        margin-top: 2px;
+    @media screen and (max-width:600px) {
+        display: block;
+    }
+    
+    }
+}
     h2{
         color: white;
         font-size: 15px;
         margin: auto 40px;
         text-align: center;
     }
-    ul{
+    .navitems{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: auto 40px;
+        
+        @media screen and (max-width:600px) {
+            display: none;
+            background-color: grey;
+        }
         li{
             list-style-type: none;
-            #active{
+            #isactive{
                 color: brown;
             }
             a{
@@ -44,6 +83,7 @@ header{
         }        
     }
 }
+
 
 .heading{
     background-image: url(service.jpg.webp);
@@ -184,20 +224,34 @@ header{
 }
 .images{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     background-color: lightgray;
     flex: 1;
     width: 100vw;
     gap: 10px;
+    @media screen and (max-width:600px) {
+        width: 100vw;
+        margin:  auto;
+        height: auto;
+        display: grid;
+        place-content: center;
+        
+    }
     .image_1{
         width: 100px;
         height: 100px;
-        margin: 80px 40px;
+        margin: auto;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        @media screen and (max-width:600px) {
+            margin-top: 90px;
+            
+        }
         P{
             text-align: center;
             font-size: 20px;
@@ -211,11 +265,15 @@ header{
     .image_2{
         width: 100px;
         height: 100px;
-        margin: 70px 40px;
+        margin: 70px auto;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        @media screen and (max-width:600px) {
+            margin-top: 110px;
+            
+        }
         h3{
             text-align: center;
             font-size: 15px;
@@ -229,11 +287,15 @@ header{
     .image_3{
         width: 50px;
         height: 50px;
-        margin: 120px 40px;
+        margin: 120px auto;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        @media screen and (max-width:600px) {
+            margin-top: 90px;
+            
+        }
         h3{
             text-align: center;
             font-size: 15px;
@@ -258,6 +320,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width:600px) {
+        width: 100vw;
+    }
     p{
         text-align: center;
         color: white;

@@ -9,13 +9,16 @@
 <body>
     <!-- HEADER SECTION -->
     <header>
-        <h2><span style="color: brown;">Aceme</span> Web Design</h2>
-        <ul>
-            <li><a id="active" href="index.html">Home</a></li>
+        <h2><span style="color: brown;">Acme</span> Web Design</h2>
+        <ul class="navitems">
+            <li><a id="isactive" href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
         </ul>
-    </header>
+        <div id="spandiv">
+            <span id = spen></span><span id="spen"></span><span id="spen"></span>
+        </div>
+        </header>
     <!-- HEADING SECTION -->
         <div class="heading">
             <h1>Affordable Professional Websites</h1>
@@ -55,13 +58,25 @@
             <p>Acme Web Design &copy;2023</p>
         </footer>
         <script>
-
+            var navbaritems = document.querySelector(".navitems");
+            var bar = document.querySelector("#spandiv");
+            bar.addEventListener("click", ()=>{
+              if(navbaritems.style.display === "none") { 
+                navbaritems.style.display = "block";
+                navbaritems.style.position = "relative";
+                navbaritems.style.top = "60%";
+                navbaritems.style.width = "20%";
+                navbaritems.style.textAlign = "center";
+            }else{
+                navbaritems.style.display = "none";
+                
+            }
+        })
             let message = document.getElementById("message");
             let loading = document.getElementById("loading");
             let goodMark = document.getElementById("good");
             let email = document.getElementById("email");
             let sendbtn = document.getElementById("submit");
-            
             sendbtn.addEventListener("click", (e)=>{
                 e.preventDefault();
                if(email.value != "" && email.value.includes(".com") && isNaN(email.value) &&
